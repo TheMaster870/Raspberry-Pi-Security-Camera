@@ -20,6 +20,7 @@ while True:
     print("done recording")
     #Move the recording to a NAS or SMB storage
     #This is setup for a share with no authentication, on a NAS called videosnas, a share called stuff and to save the recording in a folder called cctv
+    #Add "-U yourUsername%yourPassword" if your Share requres authentication and enter your username and password, leave out "%yourPassword" if there is no password for the user
     os.system("smbclient //videosnas/stuff -N -c 'cd cctv ; put " + videoname + "'")
     print("copied " + videoname)
     #Delete the recording after copying to free up space on the Pi's SD card
