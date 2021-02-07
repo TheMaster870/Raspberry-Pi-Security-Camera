@@ -56,12 +56,12 @@ Pi Camera V1.3
 
 
 #Usefull Sites
-camerastream:
+camerastream:  
 http://picamera.readthedocs.io/en/latest/recipes2.html#web-streaming
 
-smbclient:
-https://www.samba.org/samba/docs/current/man-html/smbclient.1.html
+smbclient:  
+https://www.samba.org/samba/docs/current/man-html/smbclient.1.html  
 https://www.itprotoday.com/linux/linuxs-smbclient-command
 
-Run program at startup:
+Run program at startup:  
 https://www.dexterindustries.com/howto/run-a-program-on-your-raspberry-pi-at-startup/
