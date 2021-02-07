@@ -66,7 +66,7 @@ Pi Camera V1.3
 Ether open two terminals in desktop mode and run camerastream.py in one then camerarecord.py in another  
 Or do the same with two SSH terminals on another pc. See links at the bottom for info
 
-#Usefull Sites  
+# Usefull Sites  
 camerastream:  
 http://picamera.readthedocs.io/en/latest/recipes2.html#web-streaming
 
