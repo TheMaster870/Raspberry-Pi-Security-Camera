@@ -17,8 +17,16 @@ Pi Camera V1.3
 
 	*cd /  
 	nano camerarecord.py*  
+	
+3. Turn on camera
+	
+	*sudo raspi-config  
+	3 Interface Options  
+	P1 Camera  
+	Yes  
+	OK*
 
-3. (Optional) Set Pi OS to boot to console to use less resources
+4. (Optional) Set Pi OS to boot to console to use less resources
 
 	*sudo raspi-config  
 	1 System Options  
@@ -27,7 +35,7 @@ Pi Camera V1.3
 	Finish  
 	No (To rebooting)*  
 
-4. (Recommended) Enable SSH for remote management
+5. (Recommended) Enable SSH for remote management
 	
 	sudo raspi-config  
 	3 Interface Options  
@@ -54,10 +62,17 @@ Pi Camera V1.3
 	*sudo python /camerastream.py &  
 	sudo python /camerarecord.py &*
 
+9. I would recomend checking the script are working before rebooting as you can't see any errors that appear when running at boot.  
+Ether open two terminals in desktop mode and run camerastream.py in one then camerarecord.py in another  
+Or do the same with two SSH terminals on another pc. See links at the bottom for info
 
 #Usefull Sites  
 camerastream:  
 http://picamera.readthedocs.io/en/latest/recipes2.html#web-streaming
+
+SSH:  
+https://www.raspberrypi.org/documentation/remote-access/ssh/  
+https://www.raspberrypi.org/documentation/remote-access/ssh/windows10.md  
 
 smbclient:  
 https://www.samba.org/samba/docs/current/man-html/smbclient.1.html  
