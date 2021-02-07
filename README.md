@@ -20,7 +20,7 @@ Pi Camera V1.3
 
 3. (Optional) Set Pi OS to boot to console to use less resources
 
-	*sudo raspi-config 
+	*sudo raspi-config*
 	1 System Options
 	S5 Boot / Auto Login
 	B2 Console Autologin
