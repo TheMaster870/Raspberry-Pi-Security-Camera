@@ -7,43 +7,43 @@ This how I set it up and the scripts I used.
 
 Full-Disclosure: I am not an expert with python and Raspberry Pis so I may not be able to answer every question asked but i will try my best
 
-My Setup:
-Raspberry Pi 3 B+
-Raspberry Pi OS
-Pi Camera V1.3
+My Setup:  
+Raspberry Pi 3 B+  
+Raspberry Pi OS  
+Pi Camera V1.3  
 
 1. Put the two files (camerastream.py, camerarecord.py) in the root of the Pi
 2. Modify the camerarecord.py file and enter your SMB server name, Share name and the folder in the share to place the videos
 
-	*cd /
-	nano camerarecord.py*
+	*cd /  
+	nano camerarecord.py*  
 
 3. (Optional) Set Pi OS to boot to console to use less resources
 
-	*sudo raspi-config*
-	1 System Options
-	S5 Boot / Auto Login
-	B2 Console Autologin
-	Finish
-	No (To rebooting)*
+	*sudo raspi-config  
+	1 System Options  
+	S5 Boot / Auto Login  
+	B2 Console Autologin  
+	Finish  
+	No (To rebooting)*  
 
 4. (Recommended) Enable SSH for remote management
 	
-	sudo raspi-config
-	3 Interface Options
-	P1 SSH
-	Yes (To enabling)
-	OK
-	Finish
-	passwd
-	(Enter a password for the Pi user - Default Password raspberry)
+	sudo raspi-config  
+	3 Interface Options  
+	P1 SSH  
+	Yes (To enabling)  
+	OK  
+	Finish  
+	passwd  
+	(Enter a password for the Pi user - Default Password raspberry)  
 	
 
 6. Ensure python and python3 are installed:
 
-    *sudo apt-get update
-    sudo apt-get install python
-    sudo apt-get install python3*
+    *sudo apt-get update  
+    sudo apt-get install python  
+    sudo apt-get install python3*  
 
 7. Open /etc/rc.local
 
@@ -51,5 +51,5 @@ Pi Camera V1.3
 	
 8. Just before the line "exit 0", enter:
 
-	*sudo python /camerastream.py &
+	*sudo python /camerastream.py &  
 	sudo python /camerarecord.py &*
