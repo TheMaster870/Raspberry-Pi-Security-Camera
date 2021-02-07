@@ -1,5 +1,5 @@
 #/usr/bin python
-#Import the nessesery modules
+#Import the necessary modules
 from time import sleep
 import datetime
 import os
