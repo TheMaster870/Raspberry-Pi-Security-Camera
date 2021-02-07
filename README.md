@@ -5,7 +5,7 @@ It is done this way because the camera can only be used by one program or script
 
 This how I set it up and the scripts I used.
 
-Full-Disclosure: I am not an expert with python and Raspberry Pis so I may not be able to answer every question asked but i will try my best
+Full-Disclosure: I am not an expert with Python and Raspberry Pis so I may not be able to answer every question asked but i will try my best
 
 My Setup:  
 Raspberry Pi 3 B+  
@@ -13,12 +13,15 @@ Raspberry Pi OS
 Pi Camera V1.3  
 
 1. Put the two files (camerastream.py, camerarecord.py) in the root of the Pi
+
 2. Modify the camerarecord.py file and enter your SMB server name, Share name and the folder in the share to place the videos
 
 	*cd /  
 	nano camerarecord.py*  
 	
-3. Turn on camera
+3. Connect Pi to WiFi (easier to do in Desktop mode)
+
+4. Turn on camera
 	
 	*sudo raspi-config  
 	3 Interface Options  
@@ -26,7 +29,7 @@ Pi Camera V1.3
 	Yes  
 	OK*
 
-4. (Optional) Set Pi OS to boot to console to use less resources
+5. (Optional) Set Pi OS to boot to console to use less resources
 
 	*sudo raspi-config  
 	1 System Options  
@@ -35,7 +38,7 @@ Pi Camera V1.3
 	Finish  
 	No (To rebooting)*  
 
-5. (Recommended) Enable SSH for remote management
+6. (Recommended) Enable SSH for remote management
 	
 	sudo raspi-config  
 	3 Interface Options  
@@ -47,22 +50,22 @@ Pi Camera V1.3
 	(Enter a password for the Pi user - Default Password raspberry)  
 	
 
-6. Ensure python and python3 are installed:
+7. Ensure python and python3 are installed:
 
     *sudo apt-get update  
     sudo apt-get install python  
     sudo apt-get install python3*  
 
-7. Open /etc/rc.local
+8. Open /etc/rc.local
 
 	*sudo nano /etc/rc.local*
 	
-8. Just before the line "exit 0", enter:
+9. Just before the line "exit 0", enter:
 
 	*sudo python /camerastream.py &  
 	sudo python /camerarecord.py &*
 
-9. I would recomend checking the script are working before rebooting as you can't see any errors that appear when running at boot.  
+10. I would recomend checking the script are working before rebooting as you can't see any errors that appear when running at boot.  
 Ether open two terminals in desktop mode and run camerastream.py in one then camerarecord.py in another  
 Or do the same with two SSH terminals on another pc. See links at the bottom for info
 
