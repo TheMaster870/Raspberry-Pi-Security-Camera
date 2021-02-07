@@ -65,9 +65,18 @@ Pi Camera V1.3
 	*sudo python /camerastream.py &  
 	sudo python /camerarecord.py &*
 
-10. I would recomend checking the script are working before rebooting as you can't see any errors that appear when running at boot.  
+10. I would recomend checking the scripts are working before rebooting as you can't see any errors that appear when it's running at boot.  
+Go to http://PIs-ip-address:8000 and see if it displays a live camera feed.  
+You can find the Pi's IP address by entering ifconfig into a terminal, it probably will be 192.168.1.X.  
+Temporarily set the "-t" to 10 to record 10 seconds and see if it copies to your share. 
 Ether open two terminals in desktop mode and run camerastream.py in one then camerarecord.py in another  
-Or do the same with two SSH terminals on another pc. See links at the bottom for info
+Or do the same with two SSH terminals on another pc. See links at the bottom for info  
+
+11. When your happy it's working:
+
+	sudo reboot  
+
+And watch the SMB share for the recording
 
 # Useful Sites  
 camerastream:  
