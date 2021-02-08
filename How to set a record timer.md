@@ -1,8 +1,10 @@
+
 # How to set a record timer
 You may want to only record the camera between a certain time,  
 Maybe to reduce on storage or it's not needed between a time, it's quite simple.
 
 Edit the camerarecord.py file, and add the following after the while loop starts but before it starts recording:  
+		   
     #Get the currnt hour in 24 hour format  
     thehour = datetime.datetime.now().strftime("%H")  
     #If the hour is before 7AM or after 8PM wait 5 mins and try again  
@@ -12,8 +14,8 @@ Edit the camerarecord.py file, and add the following after the while loop starts
     else:  
     
 
-It should now look smething like this:  
-```python
+It should now look something like this:  
+
     #/usr/bin python  
     #Import the nessesery modules  
     from time import sleep  
@@ -51,7 +53,6 @@ It should now look smething like this:
             os.remove("/" + videoname)  
             print("deleted " + videoname)  
             #Loop 
-            ```
 
 You can now change the times in the if statement to suit you.  
 Remember it's in 24 hour format
