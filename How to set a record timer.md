@@ -27,7 +27,7 @@ It should now look something like this:
         #Get the currnt hour in 24 hour format  
         thehour = datetime.datetime.now().strftime("%H")  
         #If the hour is before 7AM or after 8PM wait 5 mins and try again  
-        if int(thehour) >= 20 or int(thehour) <= 7:  
+        if int(thehour) >= 20 or int(thehour) < 7:  
             print("Hour is later than 8PM or before 7AM")  
             sleep(300)  
         else:  
