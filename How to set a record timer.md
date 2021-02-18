@@ -3,7 +3,7 @@
 You may want to only record the camera between a certain time,  
 Maybe to reduce on storage or it's not needed between a time, it's quite simple.
 
-Edit the camerarecord.py file, and add the following after the while loop starts but before it starts recording:  
+Edit the camerarecord.py file, and add the following after the while loop starts but before it starts recording and indent all code after by one tab:  
 		   
     #Get the currnt hour in 24 hour format  
     thehour = datetime.datetime.now().strftime("%H")  
