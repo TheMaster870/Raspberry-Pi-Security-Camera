@@ -61,7 +61,7 @@ Pi Camera V1.3
     *sudo apt-get update  
     sudo apt upgrade  
     sudo apt-get install python  
-    sudo apt-get install python3
+    sudo apt-get install python3  
     sudo apt-get install smbclient*  
 
 8. Open /etc/rc.local
