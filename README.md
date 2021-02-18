@@ -12,12 +12,18 @@ Raspberry Pi 3 B+
 Raspberry Pi OS  
 Pi Camera V1.3  
 
-1. Put the two files (camerastream.py, camerarecord.py) in the root of the Pi
+1. Clone this git and move the two .py files to the root
+	
+	*sudo apt-get install git  
+	git clone https://www.github.com/themaster870/raspberry-pi-security-camera  
+	cd raspberry-pi-security-camera  
+	sudo mv camerastream.py /  
+	sudo mv camerarecord.py /*
 
 2. Modify the camerarecord.py file and enter your SMB server name, Share name and the folder in the share to place the videos
 
 	*cd /  
-	nano camerarecord.py*  
+	sudo nano camerarecord.py*  
 	
 3. Connect Pi to WiFi (easier to do in Desktop mode)
 
@@ -50,11 +56,13 @@ Pi Camera V1.3
 	(Enter a password for the Pi user - Default Password raspberry)  
 	
 
-7. Ensure python and python3 are installed:
+7. Ensure python, python3 and smbclient are installed:
 
     *sudo apt-get update  
+    sudo apt upgrade  
     sudo apt-get install python  
-    sudo apt-get install python3*  
+    sudo apt-get install python3
+    sudo apt-get install smbclient*  
 
 8. Open /etc/rc.local
 
