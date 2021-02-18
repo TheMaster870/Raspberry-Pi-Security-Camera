@@ -25,8 +25,20 @@ Pi Camera V1.3
 	*cd /  
 	sudo nano camerarecord.py*  
 	
-3. Connect Pi to WiFi (easier to do in Desktop mode)
-
+3. Connect Pi to WiFi
+	
+	*sudo raspi-config  
+	1 System Options  
+	S1 Wireless LAN*  
+	Enter your WiFi SSID and it's password
+	
+4. Set password for pi
+	
+	*sudo raspi-config
+	1 System Options
+	S3 Password*  
+	Enter a password for the default pi user
+	
 4. Turn on camera
 	
 	*sudo raspi-config  
@@ -35,7 +47,7 @@ Pi Camera V1.3
 	Yes  
 	OK*
 
-5. (Optional) Set Pi OS to boot to console to use less resources
+5. Set Pi OS to boot to console to use less resources
 
 	*sudo raspi-config  
 	1 System Options  
@@ -44,7 +56,7 @@ Pi Camera V1.3
 	Finish  
 	No (To rebooting)*  
 
-6. (Recommended) Enable SSH for remote management
+6. Enable SSH for remote management
 	
 	sudo raspi-config  
 	3 Interface Options  
@@ -56,13 +68,16 @@ Pi Camera V1.3
 	(Enter a password for the Pi user - Default Password raspberry)  
 	
 
-7. Ensure python, python3 and smbclient are installed:
+7. Ensure python, python3 and smbclient are installed and reboot:
 
     *sudo apt-get update  
     sudo apt upgrade  
     sudo apt-get install python  
     sudo apt-get install python3  
-    sudo apt-get install smbclient*  
+    sudo apt-get install smbclient  
+    sudo apt-get install python-picamera python3-picamera  
+    sudo apt-get install ffmpeg
+    sudo reboot*  
 
 8. Open /etc/rc.local
 
@@ -70,7 +85,7 @@ Pi Camera V1.3
 	
 9. Just before the line "exit 0", enter:
 
-	*sudo python /camerastream.py &  
+	*sudo python3 /camerastream.py &  
 	sudo python /camerarecord.py &*
 
 10. I would recomend checking the scripts are working before rebooting as you can't see any errors that appear when it's running at boot.  
