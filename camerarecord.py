@@ -9,7 +9,7 @@ while True:
     #Get current date and time
     thedatetime = datetime.datetime.now().strftime("%d-%m-%Y.%H,%M,%S")
     #Set the name for the video
-    videoname = "video" + str(thedatetime) + ".flv"
+    videoname = "video" + str(thedatetime) + ".mp4"
     print("Recording " + videoname)
     #Get the mjpg stream and convert it to the videoname and extention
     #Set the recording framerate by changing the number after -r (note: the actual output framerate can be less if you Pi can't keep up)
